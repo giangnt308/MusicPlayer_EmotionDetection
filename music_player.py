@@ -490,22 +490,6 @@ class MainWindow(QMainWindow):
 				event.ignore()
 			except AttributeError:
 				pass
-
-	def playSound(sound):
-		if sound == 0:
-			playsound('./Music/emotional-piano-sad-background-music-for-videos-5688-angry.mp3')
-		if sound == 1:
-			playsound('./Music/easy-country-music-intro-outro-11915-disgusted.mp3')
-		if sound == 2:
-			playsound('./Music/relaxed-inspiration-ig-version-short-60s-6580-fearful.mp3')
-		if sound == 3:
-			playsound('./Music/cinematic-fairy-tale-story-short-kikc-8698-happy.mp3')
-		if sound == 4:
-			playsound('./Music/inspiring-cinematic-uplifting-piano-short-8701-neutral.mp3')
-		if sound == 5:
-			playsound('./Music/acoustic-guitar-dream-30-seconds-4642-sad.mp3')
-		if sound == 6:
-			playsound('./Music/FadedPianoCover-VA-4405663-Surprised.mp3')
 	
 
 if __name__ == '__main__':
