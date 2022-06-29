@@ -329,7 +329,8 @@ class MainWindow(QMainWindow):
 				cv2.putText(frame, emotion_dict[maxindex], (x+20, y-60), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2, cv2.LINE_AA)
 			cv2.imshow('Video', cv2.resize(frame,(400,400),interpolation = cv2.INTER_CUBIC))
 			if cv2.waitKey(1) & 0xFF == ord('q'):
-				break
+				mixer.music.stop()
+				break	
 
 			for (x, y, w, h) in faces:
 				cv2.rectangle(frame, (x, y-50), (x+w, y+h+10), (255, 0, 0), 2)
@@ -386,6 +387,7 @@ class MainWindow(QMainWindow):
 					mixer.music.play()
 					time.sleep(5)
 					#playsound('./Music/FadedPianoCover-VA-4405663-Surprised.mp3')
+			
 		cap.release()
 		cv2.destroyAllWindows()
 		
